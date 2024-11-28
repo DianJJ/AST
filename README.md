@@ -1,5 +1,19 @@
 # AST
 Analysis-by-Synthesis Transformer for Single-View 3D Reconstruction 
+
+### Dependencies :wrench:
+
+```
+conda env create -f environment.yml
+conda activate unicorn
+```
+
+### Dataset :arrow_down:
+
+```
+bash scripts/download_data.sh
+```
+
 ### Train models from scratch
 
 To launch a training from scratch, run:
