@@ -20,7 +20,7 @@ djia7@uic.edu
 If you find this repo useful for your research, please consider citing our paper:
 
 ```bibtex
-@inproceedings{jia2025ast,
+@inproceedings{jia2024ast,
   title={Analysis-by-Synthesis Transformer for Single-View 3D Reconstruction },
   author={Jia, Dian and Ruan, Xiaoqian and Xia, Kun and Zou, Zhiming and Wang, Le and Tang, Wei},
   booktitle={European Conference on Computer Vision},
