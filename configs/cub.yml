@@ -1,0 +1,69 @@
+dataset:
+  name: cub_200
+  img_size: 64
+model:
+  name: ast
+  mesh:
+    init: ellipse
+    scale: 0.6
+    use_mean_txt: True
+    deform_fields:
+      powers: [2,8,32]
+      milestones: [1000,2000,3000]
+    texture_uv_coarse:
+      powers: [ 2,8,32,128]
+      milestones: [ 0,1000, 2000,3000 ]
+    texture_uv:
+      powers: [2,8,32]
+      milestones: [0,1000, 2000]
+  saliency:
+    powers: [128]
+    #milestones: [0, 4800, 9600, 14400]
+    milestones: [ 0 ]
+  encoder:
+    shared: False
+  renderer:
+    cameras:
+      name: fov
+      fov: 30
+  rend_predictor:
+    alternate_optim: True
+    azim_range: [0, 360]
+    elev_range: [-10, 30]
+    roll_range: [-30, 30]
+    T_range: [0.3, 0.3, 0.3]
+    scale_range: [0.3, 0.3, 0.3]
+  milestones:
+    freeze_T_predictor: 5
+    freeze_shape: 10
+    freeze_scale_predictor: 300
+    coarse_shape: True
+    mean_txt: 2000
+  loss:
+    name: mse
+    rgb_weight: 1
+    bce_iou_weight: 0.1 #1
+    perceptual_weight: 10
+    laplacian_weight: 0.01
+    normal_weight: 0.01
+    laplacian_weight_refine: 0.01
+    normal_weight_refine: 0.01
+    uniform_weight: 0.1
+    swap_weight: 1
+training:
+  batch_size: 32 #32
+  n_workers: 4
+  optimizer:
+    name: adam
+    lr: 1.0e-4
+  #n_epoches: 16000
+  n_epoches: 4000
+  #save_epoches: [4000, 8000, 12000]
+  save_epoches: [1000, 2000, 3000]
+  #train_stat_interval: 2000
+  train_stat_interval: 1000
+  #val_stat_interval: 4000
+  val_stat_interval: 2000
+  seed: 924674
+  visualizer_port:
+  resume:
