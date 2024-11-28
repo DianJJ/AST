@@ -1,6 +1,6 @@
 # AST
 Analysis-by-Synthesis Transformer for Single-View 3D Reconstruction 
-### 2. Train models from scratch
+### Train models from scratch
 
 To launch a training from scratch, run:
 
