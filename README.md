@@ -5,7 +5,7 @@ Analysis-by-Synthesis Transformer for Single-View 3D Reconstruction
 
 ```
 conda env create -f environment.yml
-conda activate unicorn
+conda activate ast
 ```
 
 ### Dataset :arrow_down:
