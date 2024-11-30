@@ -41,3 +41,10 @@ If you find this repo useful for your research, please consider citing our paper
   year={2024}
 }
 ```
+## Acknowledgement
+
+Many thanks to these excellent open source projects:
+- [Unicorn](https://github.com/monniert/unicorn)
+- [cmr](https://github.com/akanazawa/cmr)
+- [SoftRas](https://github.com/ShichenLiu/SoftRas)
+- [detr](https://github.com/facebookresearch/detr)
